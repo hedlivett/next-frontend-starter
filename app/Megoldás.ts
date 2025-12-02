@@ -6,6 +6,14 @@ import Játékos from "@/app/Játékos";
 export default class Megoldás {
   #játékosok: Játékos[] = []; //inicalizálása
 
+  //Csak olavható jellemző a privát adattag eléréséhez
+  public get játékosokSzáma(): number {
+    return this.#játékosok.length;
+  }
+  public get fordulókSzáma(): number {
+    return this.#játékosok[0].tippekSzáma;
+  }
+
   constructor(forrás: string) {
     fs.readFileSync(forrás)
       .toString()

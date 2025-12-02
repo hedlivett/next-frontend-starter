@@ -3,6 +3,9 @@ export default class Játékos {
   #név: string;
   #tippek: number[] = [];
 
+  public get tippekSzáma(): number {
+    return this.#tippek.length;
+  }
   //Kódtagok
 
   //Konstruktor:
